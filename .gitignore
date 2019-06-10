@@ -1,0 +1,5 @@
+node_modules
+.serverless
+serverless.env.yml
+.env
+.DS_Store
