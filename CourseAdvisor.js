@@ -38,7 +38,7 @@ const CourseAdvisor = {
     } = params;
 
     try {
-      const queryString = `description: ${input}`;
+      const queryString = `enriched_description.keywords.text: ${input}`;
 
       const queryResult = await queryDiscovery(
         environmentId,
