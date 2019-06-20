@@ -51,7 +51,7 @@ const CourseAdvisor = {
       const courses = [];
 
       queryResult.results.forEach(result => {
-        if (courses.length < 3) {
+        if (courses.length <= 3) {
           const course = {
             name: result.name,
             link: `https://www.coursera.org/learn/${result.slug}`,
