@@ -48,13 +48,20 @@ const CourseAdvisor = {
         queryString
       );
 
-      return {
-        courseName: queryResult.results[0].name,
-        courseLink: `https://www.coursera.org/learn/${
-          queryResult.results[0].slug
-        }`,
-        courseDescription: queryResult.results[0].description
-      };
+      const courses = [];
+
+      queryResult.results.forEach(result => {
+        if (courses.length < 3) {
+          const course = {
+            name: result.name,
+            link: `https://www.coursera.org/learn/${result.slug}`,
+            description: result.description.split(".")[0]
+          };
+          courses.push(course);
+        }
+      });
+
+      return { courses };
     } catch (err) {
       return { err: err.message };
     }
