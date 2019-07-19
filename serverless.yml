@@ -21,10 +21,10 @@ provider:
 
 custom:
   discovery:
-    username: ${env:DISCOVERY_USERNAME, "apikey"}
-    password: ${env:DISCOVERY_PASSWORD}
-    environmentId: ${env:ENVIRONMENT_ID}
-    collectionId: ${env:COLLECTION_ID}
+    username: YOUR_USERNAME
+    password: YOUR_DISCOVERY_PASSWORD
+    environmentId: ENVIRONMENT_ID
+    collectionId: COLLECTION_ID
 
 functions:
   connectDiscovery:
