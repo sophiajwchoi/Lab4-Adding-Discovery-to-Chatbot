@@ -30,7 +30,7 @@ custom:
 resources:
   packages:
     main:
-      name: ${self.custom.package}
+      name: ${self:custom.package}
       
 functions:
   connectDiscovery:
