@@ -20,15 +20,22 @@ provider:
   runtime: nodejs:10
 
 custom:
+  package: lab4
   discovery:
     username: YOUR_USERNAME
     password: YOUR_DISCOVERY_PASSWORD
     environmentId: ENVIRONMENT_ID
     collectionId: COLLECTION_ID
-
+    
+resources:
+  packages:
+    main:
+      name: ${self.custom.package}
+      
 functions:
   connectDiscovery:
     handler: CourseAdvisor.connectDiscovery
+    name: ${self:custom.package}/connectDiscovery
     parameters:
       discoveryUsername: ${self:custom.discovery.username}
       discoveryPassword: ${self:custom.discovery.password}
