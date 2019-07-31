@@ -5,20 +5,22 @@ async function queryDiscovery(
   collectionId,
   discoveryUsername,
   discoveryPassword,
-  query
+  query,
+  url
 ) {
   // Function to query Discovery
   try {
     const discovery = new DiscoveryV1({
       version: "2019-02-01",
       username: discoveryUsername,
-      password: discoveryPassword
+      password: discoveryPassword,
+      url
     });
 
     const queryResult = await discovery.query({
       environment_id: environmentId,
       collection_id: collectionId,
-      query: query
+      query
     });
 
     return queryResult;
@@ -34,7 +36,8 @@ const CourseAdvisor = {
       discoveryPassword,
       environmentId,
       collectionId,
-      input
+      input,
+      url
     } = params;
 
     try {
@@ -45,7 +48,8 @@ const CourseAdvisor = {
         collectionId,
         discoveryUsername,
         discoveryPassword,
-        queryString
+        queryString,
+        url
       );
 
       const courses = [];

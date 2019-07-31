@@ -25,7 +25,8 @@ custom:
     username: YOUR_USERNAME
     password: YOUR_DISCOVERY_PASSWORD
     environmentId: ENVIRONMENT_ID
-    collectionId: COLLECTION_ID
+    collectionId: COLLECTION_ID,
+    url: YOUR_DISCOVERY_URL
     
 resources:
   packages:
