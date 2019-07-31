@@ -42,7 +42,8 @@ functions:
       discoveryPassword: ${self:custom.discovery.password}
       environmentId: ${self:custom.discovery.environmentId}
       collectionId: ${self:custom.discovery.collectionId}
-
+      url: ${self:custom.discovery.url}
+      
 # extend the framework using plugins listed here:
 # https://github.com/serverless/plugins
 plugins:
