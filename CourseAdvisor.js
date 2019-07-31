@@ -14,13 +14,13 @@ async function queryDiscovery(
       version: "2019-02-01",
       username: discoveryUsername,
       password: discoveryPassword,
-      url
+      url: url
     });
 
     const queryResult = await discovery.query({
       environment_id: environmentId,
       collection_id: collectionId,
-      query
+      query: query
     });
 
     return queryResult;
