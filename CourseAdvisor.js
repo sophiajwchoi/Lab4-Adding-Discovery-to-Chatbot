@@ -54,6 +54,10 @@ const CourseAdvisor = {
 
       const courses = [];
 
+      if (!queryResult.results) {
+        return queryResult;
+      }
+
       queryResult.results.forEach(result => {
         if (courses.length <= 3) {
           const course = {
