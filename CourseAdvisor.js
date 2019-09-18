@@ -59,7 +59,7 @@ const CourseAdvisor = {
       }
 
       queryResult.results.forEach(result => {
-        if (courses.length <= 3 && result.result_metadata.confidence >= 0.4) {
+        if (courses.length <= 3) {
           const course = {
             name: result.name,
             link: `https://www.coursera.org/learn/${result.slug}`,
