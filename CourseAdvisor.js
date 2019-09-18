@@ -59,7 +59,7 @@ const CourseAdvisor = {
       }
 
       queryResult.results.forEach(result => {
-        if (courses.length <= 3) {
+        if (courses.length <= 3 && result.result_metadata.confidence >= 0.4) {
           const course = {
             name: result.name,
             link: `https://www.coursera.org/learn/${result.slug}`,
@@ -68,6 +68,10 @@ const CourseAdvisor = {
           courses.push(course);
         }
       });
+
+      if (courses.length === 0) {
+        return { err: "No courses are found" };
+      }
 
       return { courses };
     } catch (err) {
