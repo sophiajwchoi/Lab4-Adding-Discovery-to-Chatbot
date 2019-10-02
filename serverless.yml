@@ -27,12 +27,13 @@ custom:
     environmentId: ENVIRONMENT_ID
     collectionId: COLLECTION_ID
     url: YOUR_DISCOVERY_URL
-    
+    intent: course_recommendation # DO NOT CHANGE
+
 resources:
   packages:
     main:
       name: ${self:custom.package}
-      
+
 functions:
   connectDiscovery:
     handler: CourseAdvisor.connectDiscovery
@@ -43,6 +44,7 @@ functions:
       environmentId: ${self:custom.discovery.environmentId}
       collectionId: ${self:custom.discovery.collectionId}
       url: ${self:custom.discovery.url}
+      intent: ${self:custom.discovery.intent}
 
 # extend the framework using plugins listed here:
 # https://github.com/serverless/plugins
