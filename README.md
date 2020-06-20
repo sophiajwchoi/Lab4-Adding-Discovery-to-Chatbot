@@ -1,6 +1,7 @@
 # Lab4-Adding-Discovery-to-Chatbot
 
 This is the source code for the lab and Capstone project for Building AI Applications with Watson APIs course on Coursera. 
+Not Being Monitored anymore.
 
 Relevant Documentation:
 
